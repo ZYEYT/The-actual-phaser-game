@@ -28,10 +28,16 @@ var GameState={
 
         this.pig= this.game.add.sprite(500, 'horse');
         this.pig.anchor.setTo(0.5);
+        //flip on x
         this.pig.scale.setTo(-1,1);
+
+        this.sheep = this.game.add.sprite(100,250,'sheep');
+        this.sheep.scale.setTo(0.5);
+        this.sheep.anchor.setTo(0.5);
+        this.sheep.angle = 90;
     },
     update: function(){
-        
+        this.sheep.angle += 0.5;        
     }
 }
 

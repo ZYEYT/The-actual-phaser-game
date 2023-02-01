@@ -35,9 +35,22 @@ var GameState={
         this.sheep.scale.setTo(0.5);
         this.sheep.anchor.setTo(0.5);
         this.sheep.angle = 90;
+        this.scale.PageAlignHorizontally = true;
+        this.scale.PageAlignVertically = true;
+        this.scale.setScreenSize(true);
+        this background = this.game.add.sprite(0,0,'background')
+        this.pig = this.game.add.sprite(this.game.world.centerX)
+        //left arrow
+        //right arrow
+        this.rightArrow = this.game.add.sprite(580,this.game.world.centerY,'arrow')
+        this.rightArrow.anchor.setTo(0.5);
+        this.rightArrow.customPrams = {direction: 1};
     },
     update: function(){
-        this.sheep.angle += 0.5;        
+        this.sheep.angle += 0.5;  
+        switchAnimal: function(sprite, event){
+            console.log('move animal');
+        }      
     }
 }
 
